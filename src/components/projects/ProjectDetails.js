@@ -10,8 +10,8 @@ const ProjectDetails = (props) => {
                     <p>lorem
                     </p>
                 </div>
-                <div className="card-action gret lighte-4 grey text">
-                   <div>Posted by Alex Bautista</div>
+                <div className="card-action gret lighte-4 white text">
+                   <div>Made by Alex Bautista</div>
                    <div>June 14</div> 
                 </div>
             </div>

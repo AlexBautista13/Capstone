@@ -9,26 +9,29 @@ body {
   font-family: sans-serif;
   background: url(/img/joker.jpg) no-repeat;
   background-size: 100%;
-  background-position: center;
+  background-position: middle;
   background-color: black;
   min-height: 100%;
+  
 }
 
 
 form{
   padding: 20px;
   margin-top: 60px;
+  opacity: .6;
 }
 
 form button, form h5{
   margin: 20px 0;
+  color:black;
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
 input[type=password]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]){
-  border-color: #ec407a;
+  border-color: black;
   box-shadow: none;
 }
 
@@ -36,11 +39,32 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label,
 input[type=email]:not(.browser-default):focus:not([readonly]) + label,
 input[type=password]:not(.browser-default):focus:not([readonly]) + label{
-  color: #ec407a !important;
+  color: black !important;
 }
 
 .card {
-  margin-right:40%;
+  margin-right:25%;
   margin-top: 10%;
   margin-block-start: 10%; 
+  background-color: white;
+  border-color: black;
+  opacity: .7;
+  color: black;
+}
+
+.card .card-title {
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+}
+
+.card .card-content .card-title {
+  display: block;
+  line-height: 32px;
+  margin-bottom: 8px;
+  color:black;
+}
+.card .card-content p {
+  margin: 0;
+  color: black;
 }
