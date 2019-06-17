@@ -1,0 +1,142 @@
+[debug] [2019-06-17T06:03:51.704Z] ----------------------------------------------------------------------
+[debug] [2019-06-17T06:03:51.710Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\kobe8\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-06-17T06:03:51.710Z] CLI Version:   7.0.0
+[debug] [2019-06-17T06:03:51.710Z] Platform:      win32
+[debug] [2019-06-17T06:03:51.710Z] Node Version:  v10.16.0
+[debug] [2019-06-17T06:03:51.713Z] Time:          Sun Jun 16 2019 23:03:51 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-17T06:03:51.713Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-17T06:03:51.767Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-17T06:03:51.769Z] > authorizing via signed-in user
+[debug] [2019-06-17T06:03:51.769Z] [iam] checking project ab-joker-app for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2019-06-17T06:03:51.773Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ab-joker-app:testIamPermissions  
+
+[debug] [2019-06-17T06:03:52.331Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-17T06:03:52.345Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ab-joker-app  
+ 
+[debug] [2019-06-17T06:03:52.615Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'ab-joker-app'...
+[info] 
+[info] i  deploying database, storage, firestore, functions, hosting
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script.
+[info] i  database: checking rules syntax...
+[debug] [2019-06-17T06:04:07.698Z] >>> HTTP REQUEST PUT https://ab-joker-app.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2019-06-17T06:04:07.974Z] <<< HTTP RESPONSE 200
+[info] +  database: rules syntax for database ab-joker-app is valid
+[debug] [2019-06-17T06:04:07.976Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/ab-joker-app  
+ 
+[debug] [2019-06-17T06:04:08.587Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2019-06-17T06:04:08.591Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/ab-joker-app:test  
+
+[debug] [2019-06-17T06:04:09.099Z] <<< HTTP RESPONSE 200
+[info] +  storage: rules file storage.rules compiled successfully
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-06-17T06:04:09.113Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/ab-joker-app:test  
+
+[debug] [2019-06-17T06:04:09.508Z] <<< HTTP RESPONSE 200
+[info] +  firestore: rules file firestore.rules compiled successfully
+[debug] [2019-06-17T06:04:09.515Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "firebase-admin": "^8.0.0",
+    "firebase-functions": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2019-06-17T06:04:09.518Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/ab-joker-app?view=CONSUMER_VIEW  
+ 
+[debug] [2019-06-17T06:04:09.520Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/ab-joker-app?view=CONSUMER_VIEW  
+ 
+[debug] [2019-06-17T06:04:10.435Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-17T06:04:10.455Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2019-06-17T06:04:10.460Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/ab-joker-app  
+ 
+[debug] [2019-06-17T06:04:10.840Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-17T06:04:10.841Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/724561551453:getServerAppConfig  
+ 
+[debug] [2019-06-17T06:04:11.082Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-17T06:04:11.085Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ab-joker-app/versions  
+
+[debug] [2019-06-17T06:04:21.476Z] <<< HTTP RESPONSE 503
+[debug] [2019-06-17T06:04:21.476Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 503, The service is currently unavailable.
+[debug] [2019-06-17T06:04:21.599Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 503,
+      "message": "The service is currently unavailable.",
+      "status": "UNAVAILABLE"
+    }
+  },
+  "response": {
+    "statusCode": 503,
+    "body": {
+      "error": {
+        "code": 503,
+        "message": "The service is currently unavailable.",
+        "status": "UNAVAILABLE"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Mon, 17 Jun 2019 06:04:20 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,44,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/ab-joker-app/versions",
+        "path": "/v1beta1/sites/ab-joker-app/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/ab-joker-app/versions"
+      },
+      "method": "POST"
+    }
+  }
+}
