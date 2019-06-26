@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
 import { connect } from 'react-redux'
+import './nav.css'
 
 const Navbar = (props) => {
   const { auth, profile } = props;
@@ -10,7 +11,8 @@ const Navbar = (props) => {
   return (
     <nav className="nav-wrapper grey darken-3">
       <div className="container">
-        <Link to='/' className="brand-logo">Joker App</Link>
+        <Link to='/' className="brand-logo  ">JokerApp</Link>
+        
         {links}
       </div>
     </nav>
